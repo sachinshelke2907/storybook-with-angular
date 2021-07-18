@@ -1,0 +1,7 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>With Time Picker</mat-label>
+    <input matInput placeholder="Choose date" [timePicker]="true" [timePickerSeconds]="true" [timePickerIncrement]="15"
+        [timePicker24Hour]="true" [showCancel]="true"
+        [locale]="{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}" [singleDatePicker]="true"
+        ngxDaterangepickerMd>
+</mat-form-field>
