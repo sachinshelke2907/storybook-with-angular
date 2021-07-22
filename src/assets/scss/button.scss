@@ -1,0 +1,24 @@
+
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button{border-radius:2px!important;box-shadow: none!important;font-size: 14px;letter-spacing: 1px;text-transform: uppercase; font-weight: 600;font-family: "Open Sans";transition: 0.3s;line-height: 40px!important;}
+
+
+button.primary-button{
+    background-color: #0985c7;
+    color:#fff;
+    &:hover{background-color: #035A99;}
+}
+
+button.secondary-button{
+    background-color: #F0F2F4;
+    color: #5C6870;
+    &:hover{  background-color: #E2E6E8;}
+}
+
+button.tertiary-button{
+    background-color: transparent;
+    color: #5C6870;
+    border: 1px solid transparent;
+    &:hover{  border-color: #ABB4BA!important;background: transparent;
+        .mat-button-focus-overlay{background: none;}
+    }
+}

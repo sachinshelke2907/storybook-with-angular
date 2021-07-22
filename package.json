@@ -10,7 +10,9 @@
     "e2e": "ng e2e",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
-    "build-storybook": "npm run docs:json && build-storybook"
+    "build-storybook": "npm run docs:json && build-storybook",
+    "dsm-storybook:publish": "dsm-storybook publish",
+    "dsm-storybook:preview": "dsm-storybook preview"
   },
   "private": true,
   "dependencies": {
@@ -24,8 +26,14 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
+    "@invisionapp/dsm-storybook": "0.0.147",
+    "@storybook/addon-a11y": "^6.3.4",
+    "@storybook/addon-knobs": "^6.3.0",
+    "@storybook/addon-options": "^5.3.21",
+    "@storybook/addon-storysource": "^6.3.4",
     "ag-grid-angular": "^25.3.0",
     "ag-grid-community": "^25.3.0",
+    "ag-grid-enterprise": "^25.3.0",
     "moment": "^2.29.1",
     "ngx-daterangepicker-material": "^5.0.1",
     "rxjs": "~6.6.0",

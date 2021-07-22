@@ -12,7 +12,7 @@ import { WithTimepickerComponent } from 'src/app/daterangepicker/with-timepicker
 import { SingleWithTimeComponent } from 'src/app/daterangepicker/single-with-time/single-with-time.component';
 
 export default {
-    title: 'Example/Date Picker',
+    title: 'Example/DatePicker',
     component: DaterangepickerComponent,
     decorators: [
         moduleMetadata({

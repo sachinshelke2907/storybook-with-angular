@@ -1,0 +1,202 @@
+
+---------------------------------------------------      DSM Log Start      ---------------------------------------------------
+Error message: No stories with DSM component container IDs were found. If this does not sound correct, make sure you are not using the "Template.bind({})" convention in your stories. DSM does not currently support this syntax for creating multiple stories. For further assistance visit (https://support.invisionapp.com). 
+  
+Created Date: 22/7/2021, 6:52:08 pm
+Story file path: No story file path
+Component file path: Not found in "in-dsm"
+
+###  FILE: package.json
+  
+{
+  "pkg": {
+    "name": "angular-storybook",
+    "version": "0.0.0",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e",
+      "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
+      "storybook": "npm run docs:json && start-storybook -p 6006",
+      "build-storybook": "npm run docs:json && build-storybook",
+      "dsm-storybook:publish": "dsm-storybook publish",
+      "dsm-storybook:preview": "dsm-storybook preview"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "~11.2.14",
+      "@angular/cdk": "^11.2.13",
+      "@angular/common": "~11.2.14",
+      "@angular/compiler": "~11.2.14",
+      "@angular/core": "~11.2.14",
+      "@angular/forms": "~11.2.14",
+      "@angular/material": "^11.2.13",
+      "@angular/platform-browser": "~11.2.14",
+      "@angular/platform-browser-dynamic": "~11.2.14",
+      "@angular/router": "~11.2.14",
+      "@invisionapp/dsm-storybook": "0.0.147",
+      "@storybook/addon-a11y": "^6.3.4",
+      "@storybook/addon-knobs": "^6.3.0",
+      "@storybook/addon-options": "^5.3.21",
+      "@storybook/addon-storysource": "^6.3.4",
+      "ag-grid-angular": "^25.3.0",
+      "ag-grid-community": "^25.3.0",
+      "ag-grid-enterprise": "^25.3.0",
+      "moment": "^2.29.1",
+      "ngx-daterangepicker-material": "^5.0.1",
+      "rxjs": "~6.6.0",
+      "tslib": "^2.0.0",
+      "zone.js": "~0.11.3"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "~0.1102.13",
+      "@angular/cli": "~11.2.14",
+      "@angular/compiler-cli": "~11.2.14",
+      "@angular/elements": "^12.1.2",
+      "@babel/core": "^7.14.6",
+      "@compodoc/compodoc": "^1.1.14",
+      "@storybook/addon-actions": "^6.3.4",
+      "@storybook/addon-essentials": "^6.3.4",
+      "@storybook/addon-links": "^6.3.4",
+      "@storybook/angular": "^6.3.4",
+      "@types/jasmine": "~3.6.0",
+      "@types/node": "^12.11.1",
+      "@webcomponents/custom-elements": "^1.4.3",
+      "babel-loader": "^8.2.2",
+      "codelyzer": "^6.0.0",
+      "jasmine-core": "~3.6.0",
+      "jasmine-spec-reporter": "~5.0.0",
+      "karma": "~6.1.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.0.3",
+      "karma-jasmine": "~4.0.0",
+      "karma-jasmine-html-reporter": "~1.5.0",
+      "protractor": "~7.0.0",
+      "ts-node": "~8.3.0",
+      "tslint": "~6.1.0",
+      "typescript": "~4.1.5"
+    },
+    "readme": "ERROR: No README data found!",
+    "_id": "angular-storybook@0.0.0"
+  },
+  "path": "D:\\Angular-Training\\storybook-with-angular\\package.json"
+}
+
+###  FILE: '.dsmrc'
+  
+{
+  "dsmHost": "sscdms.invisionapp.com",
+  "organization": "ss-c-technologies",
+  "outputDir": ".dsm",
+  "storyPath": "src/stories/**/*.stories.ts"
+}
+
+####  STORYBOOK CONFIG D:\Angular-Training\storybook-with-angular\.storybook\*
+   
+
+###  FILE: D:/Angular-Training/storybook-with-angular/.storybook/main.js
+  
+module.exports = {
+  "stories": ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+
+  
+  "addons": [
+    '@storybook/addon-knobs',
+    '@storybook/addon-actions',
+    '@storybook/addon-a11y',
+    '@storybook/addon-essentials',
+    '@invisionapp/dsm-storybook'
+  ]
+}
+,
+###  FILE: D:/Angular-Training/storybook-with-angular/.storybook/manager.js
+  
+import { addons } from '@storybook/addons';
+import { getDsmOptions, getDsmTheme } from '@invisionapp/dsm-storybook';
+
+/**
+ * To override @invisionapp/dsm-storybook custom options/theme you can use Storybook options parameter and theming
+ * -- this will only override the specific parameters you change --
+ * options: https://storybook.js.org/docs/react/configure/features-and-behavior
+ * theming: https://storybook.js.org/docs/react/configure/theming
+ * Example code below
+ **/
+//  addons.setConfig({
+//   ...getDsmOptions(process.env.STORYBOOK_DSM),
+//   showNav: true,
+//   theme: {
+//     ...getDsmTheme(process.env.STORYBOOK_DSM),
+//     colorPrimary: '#123456'
+//   }
+//  });
+
+addons.setConfig({
+  ...getDsmOptions(process.env.STORYBOOK_DSM)
+  // Using the DSM theme is optional
+  // theme: {
+  //   ...getDsmTheme(process.env.STORYBOOK_DSM)
+  // }
+});
+
+,
+###  FILE: D:/Angular-Training/storybook-with-angular/.storybook/preview.js
+  
+// import { setCompodocJson } from "@storybook/addon-docs/angular";
+// import docJson from "../documentation.json";
+// setCompodocJson(docJson);
+
+// export const parameters = {
+//   actions: { argTypesRegex: "^on[A-Z].*" },
+//   controls: {
+//     matchers: {
+//       color: /(background|color)$/i,
+//       date: /Date$/,
+//     },
+//   },
+//   docs: { inlineStories: true },
+// }
+
+import { withDsm } from '@invisionapp/dsm-storybook';
+
+export const parameters = {
+  actions: { argTypesRegex: '^on[A-Z].*' }
+};
+
+export const decorators = [withDsm];
+,
+###  FILE: D:/Angular-Training/storybook-with-angular/.storybook/tsconfig.json
+  
+{
+  "extends": "../tsconfig.app.json",
+  "compilerOptions": {
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "../src/test.ts",
+    "../src/**/*.spec.ts",
+    "../projects/**/*.spec.ts"
+  ],
+  "include": [
+    "../src/**/*",
+    "../projects/**/*"
+  ],
+  "files": [
+    "./typings.d.ts"
+  ]
+}
+
+,
+###  FILE: D:/Angular-Training/storybook-with-angular/.storybook/typings.d.ts
+  
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
+
+ 
+---------------------------------------------------      DSM Log End      -----------------------------------------------------

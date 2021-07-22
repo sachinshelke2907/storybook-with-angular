@@ -1,0 +1,7 @@
+{
+  "authToken": "b5802c6e5bf092703e0165387002fc9d",
+  "dsmHost": "sscdms.invisionapp.com",
+  "organization": "ss-c-technologies",
+  "outputDir": ".dsm",
+  "storyPath": "src/stories/**/*.stories.ts"
+}
