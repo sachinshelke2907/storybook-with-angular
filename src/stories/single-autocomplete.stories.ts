@@ -12,7 +12,6 @@ import { SimpleSingleSelectComponent } from 'src/app/single-autocomplete/simple-
 
 export default {
     title: 'Example/Single Autocomplete',
-    component: SingleAutocompleteComponent,
     decorators: [
         moduleMetadata({
             declarations: [
@@ -28,6 +27,18 @@ export default {
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+          versionFilePath: '',
+          componentPath: ''
+        },
+        docs: {
+          source: {
+            type: 'code',
+          }
+        }
+      }
 } as Meta;
 
 const Template: Story<SingleAutocompleteComponent> = (args: SingleAutocompleteComponent) => ({

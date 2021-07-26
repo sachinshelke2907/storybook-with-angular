@@ -17,9 +17,12 @@
     "target": "es2015",
     "module": "es2020",
     "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
     "lib": [
       "es2018",
-      "dom"
+      "dom",
+      "dom.iterable"
     ]
   },
   "angularCompilerOptions": {

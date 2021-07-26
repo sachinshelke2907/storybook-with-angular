@@ -1,6 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import DaterangepickerComponent from 'src/app/daterangepicker/daterangepicker.component';
 import { SimpleDaterangepickerComponent } from 'src/app/daterangepicker/simple-daterangepicker/simple-daterangepicker.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
@@ -23,10 +24,22 @@ export default {
                 WithTimepickerComponent,
                 SingleWithTimeComponent
             ],
-            imports: [BrowserAnimationsModule, MatInputModule, NgxDaterangepickerMd.forRoot()],
+            imports: [BrowserAnimationsModule, MatInputModule,MatIconModule, NgxDaterangepickerMd.forRoot()],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+          versionFilePath: '',
+          componentPath: ''
+        },
+        docs: {
+        //   source: {
+        //     type: 'code',
+        //   }
+        }
+      }
 } as Meta;
 
 const Template: Story<DaterangepickerComponent> = (args: DaterangepickerComponent) => ({

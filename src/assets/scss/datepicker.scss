@@ -9,7 +9,7 @@
 }
 .md-drppicker {
   top: 44px !important;
-  left: -11px !important;
+  left: -46px !important;
   background-color: #fff;
 
   border-radius: 4px;
@@ -621,6 +621,7 @@ $white-color: #ffffff;
   text-transform: uppercase;
   transition: 0.3s;
   padding: 10px 15px;
+  &:hover{background-color: #035A99;}
 }
 
 .md-drppicker .btn.btn-default {
@@ -629,8 +630,11 @@ $white-color: #ffffff;
   margin-right: 10px;
   &:hover {
     border: 1px solid #989898;
+    
   }
 }
+
+
 
 .md-drppicker.show-ranges.single.rtl .drp-calendar.left {
   border-right: 1px solid #ddd;
@@ -1195,7 +1199,6 @@ $white-color: #ffffff;
 
   border-collapse: collapse;
 }
-
 .md-drppicker td.available:hover,
 .md-drppicker th.available:hover {
   background-color: transparent!important;
@@ -1206,11 +1209,12 @@ $white-color: #ffffff;
   &.active,&.in-range{
       &:hover{ background-color: #d3e5f2!important;}
   }
+  
 }
 
 .md-drppicker td.available:hover span,
 .md-drppicker th.available:hover {
-  background-color: #eee;
+  background-color: #d3e5f2;
 
   border-color: transparent;
 

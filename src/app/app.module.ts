@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -19,7 +19,21 @@ import { SecondaryButtonComponent } from './button/secondary/secondary.component
 import { TertiaryButtonComponent } from './button/tertiary/tertiary.component';
 import { SingleAutocompleteComponent } from './single-autocomplete/single-autocomplete.component';
 import { SimpleSingleSelectComponent } from './single-autocomplete/simple-single-select/simple-single-select.component';
-import { BlueBandComponent } from './blue-band/blue-band.component';
+import BlueBandComponent from './blue-band/blue-band.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { TabsComponent } from './tabs/tabs.component';
+import { IconComponent } from './icon/icon.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { AgGridModule } from 'ag-grid-angular';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,13 +53,29 @@ import { BlueBandComponent } from './blue-band/blue-band.component';
     TertiaryButtonComponent,
     SingleAutocompleteComponent,
     SimpleSingleSelectComponent,
-    BlueBandComponent
+    BlueBandComponent,
+    CheckboxComponent,
+    RadioButtonComponent,
+    TabsComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    AgGridModule.withComponents([]),
+    MatCheckboxModule,
+    MatRadioModule,
+    MatTabsModule,
+    NgxDaterangepickerMd.forRoot(),
+    HttpClientModule,
+    MatAutocompleteModule
+
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

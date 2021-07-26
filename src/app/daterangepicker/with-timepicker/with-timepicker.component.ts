@@ -11,7 +11,7 @@ export class WithTimepickerComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    isInvalidDate(date) {
+    isInvalidDate(date): boolean {
         return date.weekday() === 0;
     }
 }

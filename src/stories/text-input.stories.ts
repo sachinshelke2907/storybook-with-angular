@@ -18,6 +18,18 @@ export default {
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+          versionFilePath: '',
+          componentPath: ''
+        },
+        docs: {
+          source: {
+            type: 'code',
+          }
+        }
+      }
 } as Meta;
 
 const Template: Story<TextInputComponent> = (args: TextInputComponent) => ({

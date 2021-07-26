@@ -1,6 +1,7 @@
 <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Custom Date Range</mat-label>
+    <mat-label>Date Range</mat-label>
     <input  autocomplete="off" [autoApply] ="false" matInput [showCustomRangeLabel]="true" [alwaysShowCalendars]="true" [ranges]="ranges"
         [linkedCalendars]="true" [showCancel]="true" [locale]="{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}" [isInvalidDate]="isInvalidDate" placeholder="Choose date"
         ngxDaterangepickerMd>
+    <mat-icon matPrefix class="material-icons-outlined">calendar_today</mat-icon>
 </mat-form-field>

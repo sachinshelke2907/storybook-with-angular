@@ -3,17 +3,13 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { MatIconModule } from '@angular/material/icon';
-
-import { BlueBandComponent } from 'src/app/blue-band/blue-band.component';
+import BlueBandComponent from 'src/app/blue-band/blue-band.component';
 
 export default {
     title: 'Example/Blue Band',
     component: BlueBandComponent,
     decorators: [
         moduleMetadata({
-            declarations: [
-
-            ],
             imports: [BrowserAnimationsModule, MatIconModule
             ],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -27,6 +23,18 @@ export default {
             }
         },
     },
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+          versionFilePath: '',
+          componentPath: ''
+        },
+        docs: {
+          source: {
+            type: 'code',
+          }
+        }
+      }
 } as Meta;
 
 const Template: Story<BlueBandComponent> = (args: BlueBandComponent) => ({

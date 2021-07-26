@@ -159,7 +159,7 @@
         },
         {
             "name": "BlueBandComponent",
-            "id": "component-BlueBandComponent-55058991fe07184404315f2171a8458b",
+            "id": "component-BlueBandComponent-7e45e8131ed5d295c43f0f76bc0b0c02",
             "file": "src/app/blue-band/blue-band.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -181,7 +181,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 11,
                     "type": "boolean"
                 }
             ],
@@ -194,7 +194,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 14,
+                    "line": 15,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -206,7 +206,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-blue-band',\n  templateUrl: './blue-band.component.html',\n  styleUrls: ['./blue-band.component.scss']\n})\nexport class BlueBandComponent implements OnInit {\n  @Input()\n  iconsOption?: boolean = false;\n  \n\n  constructor() { }\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-blue-band',\n  templateUrl: './blue-band.component.html',\n  styleUrls: ['./blue-band.component.scss']\n})\nexport default class BlueBandComponent implements OnInit {\n\n  @Input()\n  iconsOption = false;\n\n\n  constructor() { }\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -221,7 +221,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 10
+                "line": 11
             },
             "implements": [
                 "OnInit"
@@ -331,7 +331,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
                     "styleUrl": "./button.css"
                 }
             ],
@@ -350,7 +350,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-4dd9f7db0bc205ae843ee3b5882445c0-1",
+            "id": "component-ButtonComponent-bc0a73bd20c0dd9dc4d44cacf851c706-1",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -436,7 +436,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input()\n  buttonType? = 'primary'\n\n  constructor() { }\n\n  ngOnInit(): void {}\n\n  public isPrimary(): boolean {\n      return ('primary' == this.buttonType);\n  }\n\n  public isSecondary(): boolean {\n      return ('secondary' == this.buttonType);\n  }\n\n  public isTertiary(): boolean {\n      return ('tertiary' == this.buttonType);\n  }\n\n }\n",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n  @Input()\n  buttonType ? = 'primary';\n\n  constructor() { }\n\n  ngOnInit(): void {}\n\n  public isPrimary(): boolean {\n      return ('primary' === this.buttonType);\n  }\n\n  public isSecondary(): boolean {\n      return ('secondary' === this.buttonType);\n  }\n\n  public isTertiary(): boolean {\n      return ('tertiary' === this.buttonType);\n  }\n\n }\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -462,8 +462,190 @@
             "templateData": "<app-primary-button *ngIf=\"isPrimary()\"></app-primary-button>\n<app-secondary-button *ngIf=\"isSecondary()\"></app-secondary-button>\n<app-tertiary-button *ngIf=\"isTertiary()\"></app-tertiary-button>"
         },
         {
+            "name": "ButtonComponent1",
+            "id": "component-ButtonComponent1-70d0ef333ff65b5471507de67ad04a8e",
+            "file": "src/stories/button1.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "What background color to use",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 705,
+                            "end": 718,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 706,
+                                "end": 714,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "Button contents",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40,
+                    "type": "string"
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "Is this the principal call to action on the page?",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean"
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "How large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\""
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport  class ButtonComponent1 {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['material-icons-button', `material-icons-${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-280777f2a18219accd4db1e38923db1c",
+            "file": "src/app/checkbox/checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-checkbox",
+            "styleUrls": [
+                "./checkbox.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-checkbox',\n  templateUrl: './checkbox.component.html',\n  styleUrls: ['./checkbox.component.scss']\n})\nexport class CheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./checkbox.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<mat-checkbox>Check me!</mat-checkbox>\n"
+        },
+        {
             "name": "CustomRangeComponent",
-            "id": "component-CustomRangeComponent-34b72a27bb1abfa90b3a4cbe1e2968b0",
+            "id": "component-CustomRangeComponent-5531f5cde13bf32a0935ab737d35cdeb",
             "file": "src/app/daterangepicker/custom-range/custom-range.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -539,7 +721,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\n\r\n@Component({\r\n    selector: 'app-custom-range',\r\n    templateUrl: './custom-range.component.html'\r\n})\r\nexport class CustomRangeComponent implements OnInit {\r\n\r\n    alwaysShowCalendars: boolean;\r\n    ranges: any = {\r\n        'Today': [moment(), moment()],\r\n        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],\r\n        'Last 7 Days': [moment().subtract(6, 'days'), moment()],\r\n        'Last 30 Days': [moment().subtract(29, 'days'), moment()],\r\n        'This Month': [moment().startOf('month'), moment().endOf('month')],\r\n        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]\r\n    }\r\n    invalidDates: moment.Moment[] = [moment().add(2, 'days'), moment().add(3, 'days'), moment().add(5, 'days')];\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n     }\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    isInvalidDate = (m: moment.Moment) => {\r\n        return this.invalidDates.some(d => d.isSame(m, 'day'))\r\n    }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\n\r\n@Component({\r\n    selector: 'app-custom-range',\r\n    templateUrl: './custom-range.component.html'\r\n})\r\nexport class CustomRangeComponent implements OnInit {\r\n\r\n    alwaysShowCalendars: boolean;\r\n    ranges: any = {\r\n        'Today': [moment(), moment()],\r\n        'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],\r\n        'Last 7 Days': [moment().subtract(6, 'days'), moment()],\r\n        'Last 30 Days': [moment().subtract(29, 'days'), moment()],\r\n        'This Month': [moment().startOf('month'), moment().endOf('month')],\r\n        'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]\r\n    };\r\n    invalidDates: moment.Moment[] = [moment().add(2, 'days'), moment().add(3, 'days'), moment().add(5, 'days')];\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n     }\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    isInvalidDate = (m: moment.Moment) => {\r\n        return this.invalidDates.some(d => d.isSame(m, 'day'));\r\n    }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -554,11 +736,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Custom Date Range</mat-label>\r\n    <input  autocomplete=\"off\" [autoApply] =\"false\" matInput [showCustomRangeLabel]=\"true\" [alwaysShowCalendars]=\"true\" [ranges]=\"ranges\"\r\n        [linkedCalendars]=\"true\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [isInvalidDate]=\"isInvalidDate\" placeholder=\"Choose date\"\r\n        ngxDaterangepickerMd>\r\n</mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Date Range</mat-label>\r\n    <input  autocomplete=\"off\" [autoApply] =\"false\" matInput [showCustomRangeLabel]=\"true\" [alwaysShowCalendars]=\"true\" [ranges]=\"ranges\"\r\n        [linkedCalendars]=\"true\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [isInvalidDate]=\"isInvalidDate\" placeholder=\"Choose date\"\r\n        ngxDaterangepickerMd>\r\n    <mat-icon matPrefix class=\"material-icons-outlined\">calendar_today</mat-icon>\r\n</mat-form-field>\r\n"
         },
         {
             "name": "DaterangepickerComponent",
-            "id": "component-DaterangepickerComponent-bfa85308e85addef7f167e8badb25259",
+            "id": "component-DaterangepickerComponent-45aa56aa90fc0cb5f0e0fee756d16e47",
             "file": "src/app/daterangepicker/daterangepicker.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -668,7 +850,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n    selector: 'app-daterangepicker',\r\n    templateUrl: './daterangepicker.component.html'\r\n})\r\nexport default class DaterangepickerComponent implements OnInit {\r\n\r\n    @Input()\r\n    datePickerType? = 'simple'\r\n\r\n    constructor() { }\r\n\r\n    ngOnInit(): void {}\r\n\r\n    public isSimple(): boolean {\r\n        return ('simple' == this.datePickerType);\r\n    }\r\n\r\n    public isSingle(): boolean {\r\n        return ('single' == this.datePickerType);\r\n    }\r\n\r\n    public isCustomRange(): boolean {\r\n        return ('customRange' == this.datePickerType);\r\n    }\r\n\r\n    public isWithTime(): boolean {\r\n        return ('withTime' == this.datePickerType);\r\n    }\r\n\r\n    public isSingleWithTime(): boolean {\r\n        return ('singleWithTime' == this.datePickerType);\r\n    }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n    selector: 'app-daterangepicker',\r\n    templateUrl: './daterangepicker.component.html'\r\n})\r\nexport default class DaterangepickerComponent implements OnInit {\r\n\r\n    @Input()\r\n    datePickerType? = 'simple';\r\n\r\n    constructor() { }\r\n\r\n    ngOnInit(): void {}\r\n\r\n    public isSimple(): boolean {\r\n        return ('simple' === this.datePickerType);\r\n    }\r\n\r\n    public isSingle(): boolean {\r\n        return ('single' === this.datePickerType);\r\n    }\r\n\r\n    public isCustomRange(): boolean {\r\n        return ('customRange' === this.datePickerType);\r\n    }\r\n\r\n    public isWithTime(): boolean {\r\n        return ('withTime' === this.datePickerType);\r\n    }\r\n\r\n    public isSingleWithTime(): boolean {\r\n        return ('singleWithTime' === this.datePickerType);\r\n    }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -756,6 +938,116 @@
                 }
             ],
             "stylesData": ""
+        },
+        {
+            "name": "IconComponent",
+            "id": "component-IconComponent-5dfc19053b720cbe76cebf8c9789f510",
+            "file": "src/app/icon/icon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-icon",
+            "styleUrls": [
+                "./icon.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./icon.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 412,
+                            "end": 427,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 317,
+                            "tagName": {
+                                "pos": 413,
+                                "end": 421,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 78,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "Button contents",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 24,
+                    "type": "string"
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'filled'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "How large should the button be?",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 16,
+                    "type": "\"outlined\" | \"filled\""
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 30,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-icon',\n  templateUrl: './icon.component.html',\n  styleUrls: ['./icon.component.scss']\n})\nexport   class IconComponent {\n  constructor() { }\n\n\n    /**\n     * How large should the button be?\n     */\n    @Input()\n    type: 'outlined' | 'filled'  = 'filled';\n\n    /**\n     * Button contents\n     *\n     * @required\n     */\n    @Input()\n    label: string;\n\n    /**\n     * Optional click handler\n     */\n    @Output()\n    onClick = new EventEmitter<Event>();\n\n    public get classes(): string[] {\n      return [`material-icons-${this.type}`];\n    }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./icon.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 32
+                    }
+                }
+            },
+            "templateData": "<mat-icon [ngClass]=\"classes\">{{label}}</mat-icon>\n"
         },
         {
             "name": "PageComponent",
@@ -892,6 +1184,68 @@
             "templateData": "<button mat-flat-button class=\"primary-button\">Primary</button>"
         },
         {
+            "name": "RadioButtonComponent",
+            "id": "component-RadioButtonComponent-2955ebb674bf9579b1c46cdba8d921a5",
+            "file": "src/app/radio-button/radio-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-radio-button",
+            "styleUrls": [
+                "./radio-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./radio-button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-radio-button',\n  templateUrl: './radio-button.component.html',\n  styleUrls: ['./radio-button.component.scss']\n})\nexport class RadioButtonComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./radio-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<mat-radio-group aria-label=\"Select an option\" class=\"radio-group-inline\">\n    <mat-radio-button value=\"1\">Option 1</mat-radio-button>\n    <mat-radio-button value=\"2\">Option 2</mat-radio-button>\n  </mat-radio-group>"
+        },
+        {
             "name": "SecondaryButtonComponent",
             "id": "component-SecondaryButtonComponent-436ee1862c5f887846b3803f00a65616",
             "file": "src/app/button/secondary/secondary.component.ts",
@@ -955,7 +1309,7 @@
         },
         {
             "name": "SimpleComponent",
-            "id": "component-SimpleComponent-cf561c3ec322ba14ea6658ada83a6d1a",
+            "id": "component-SimpleComponent-19de8080cfbc70f5fe09763a44efca65",
             "file": "src/app/ag-grid/simple/simple.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -994,7 +1348,7 @@
                 },
                 {
                     "name": "defaultColDef",
-                    "defaultValue": "{\r\n        flex: 1,\r\n        minWidth: 150,\r\n        filter: true,\r\n        SingleClickEdit:true,\r\n        sortable:true,\r\n        resizable: true,\r\n    }",
+                    "defaultValue": "{\r\n        flex: 1,\r\n        minWidth: 150,\r\n        filter: true,\r\n        SingleClickEdit: true,\r\n        sortable: true,\r\n        resizable: true,\r\n    }",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
@@ -1102,7 +1456,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport 'ag-grid-enterprise';\r\nimport { simpleGridColumn, simpleGridRowData } from '../ag-grid.mock';\r\nimport 'ag-grid-community/dist/styles/ag-grid.css';\r\nimport 'ag-grid-community/dist/styles/ag-theme-alpine.css';\r\n@Component({\r\n    selector: 'app-ag-simple',\r\n    templateUrl: './simple.component.html'\r\n})\r\nexport class SimpleComponent implements OnInit {\r\n    columnDefs = simpleGridColumn;\r\n    rowData = simpleGridRowData;\r\n    defaultColDef = {\r\n        flex: 1,\r\n        minWidth: 150,\r\n        filter: true,\r\n        SingleClickEdit:true,\r\n        sortable:true,\r\n        resizable: true,\r\n    };\r\n    sortingOrder= ['desc', 'asc', null];\r\n    rowSelection = 'multiple';\r\n    suppressRowClickSelection = true;\r\n    suppressAggFuncInHeader = true;\r\n    pivotMode = false;\r\n    suppressColumnVirtualisation = true;\r\n    debounceVerticalScrollbar =  true;\r\n    rowClass= 'white-bg';\r\n\r\n\r\n\r\n    constructor() {\r\n    }\r\n\r\n    ngOnInit(): void {\r\n        console.log(this.columnDefs);\r\n    }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport 'ag-grid-enterprise';\r\nimport { simpleGridColumn, simpleGridRowData } from '../ag-grid.mock';\r\nimport 'ag-grid-community/dist/styles/ag-grid.css';\r\nimport 'ag-grid-community/dist/styles/ag-theme-alpine.css';\r\n@Component({\r\n    selector: 'app-ag-simple',\r\n    templateUrl: './simple.component.html'\r\n})\r\nexport class SimpleComponent implements OnInit {\r\n    columnDefs = simpleGridColumn;\r\n    rowData = simpleGridRowData;\r\n    defaultColDef = {\r\n        flex: 1,\r\n        minWidth: 150,\r\n        filter: true,\r\n        SingleClickEdit: true,\r\n        sortable: true,\r\n        resizable: true,\r\n    };\r\n    sortingOrder = ['desc', 'asc', null];\r\n    rowSelection = 'multiple';\r\n    suppressRowClickSelection = true;\r\n    suppressAggFuncInHeader = true;\r\n    pivotMode = false;\r\n    suppressColumnVirtualisation = true;\r\n    debounceVerticalScrollbar =  true;\r\n    rowClass = 'white-bg';\r\n\r\n\r\n\r\n    constructor() {\r\n    }\r\n\r\n    ngOnInit(): void {\r\n        console.log(this.columnDefs);\r\n    }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -1172,7 +1526,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Simple daterangepicker</mat-label>\r\n    <input  autocomplete=\"off\" [autoApply] =\"false\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" matInput placeholder=\"Choose date\" ngxDaterangepickerMd>\r\n</mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Date Range</mat-label>\r\n    <input  autocomplete=\"off\" [autoApply] =\"false\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" matInput placeholder=\"Choose date\" ngxDaterangepickerMd>\r\n    <mat-icon matPrefix class=\"material-icons-outlined\">calendar_today</mat-icon>\r\n\r\n</mat-form-field>"
         },
         {
             "name": "SimpleInputComponent",
@@ -1317,7 +1671,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Label</mat-label>\n    <input type=\"text\"\n           placeholder=\"Select One\"\n           aria-label=\"Label\"\n           matInput\n           [formControl]=\"myControl\"\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\n    <mat-label>Label</mat-label>\n    <input type=\"text\"\n           placeholder=\"Select One\"\n           aria-label=\"Label\"\n           matInput\n           [matAutocomplete]=\"auto\">\n    <mat-autocomplete #auto=\"matAutocomplete\">\n      <mat-option *ngFor=\"let option of options\" [value]=\"option\">\n        {{option}}\n      </mat-option>\n    </mat-autocomplete>\n  </mat-form-field>"
         },
         {
             "name": "SingleAutocompleteComponent",
@@ -1383,7 +1737,7 @@
         },
         {
             "name": "SingleDaterangepickerComponent",
-            "id": "component-SingleDaterangepickerComponent-69b790a2b9e4291ed26ba8ecb0d75ba8",
+            "id": "component-SingleDaterangepickerComponent-1456eba57d382d08c2fb7d1ef6d2202c",
             "file": "src/app/daterangepicker/single-daterangepicker/single-daterangepicker.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1407,7 +1761,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 15
                 },
                 {
                     "name": "locale",
@@ -1417,7 +1771,7 @@
                     "type": "LocaleConfig",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 17
                 }
             ],
             "methodsClass": [
@@ -1483,7 +1837,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1495,7 +1849,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\nimport { LocaleConfig } from 'ngx-daterangepicker-material';\r\n\r\n@Component({\r\n    selector: 'app-single-daterangepicker',\r\n    templateUrl: './single-daterangepicker.component.html'\r\n})\r\nexport class SingleDaterangepickerComponent implements OnInit {\r\n\r\n    alwaysShowCalendars: boolean;\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n    }\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    locale: LocaleConfig = {\r\n        applyLabel: 'Appliquer',\r\n        customRangeLabel: ' - ',\r\n        daysOfWeek: moment.weekdaysMin(),\r\n        monthNames: moment.monthsShort(),\r\n        firstDay: moment.localeData().firstDayOfWeek(),\r\n    }\r\n\r\n    isInvalidDate(date) {\r\n        return date.weekday() === 0;\r\n    }\r\n\r\n    isCustomDate(date) {\r\n        return (\r\n            date.weekday() === 0 ||\r\n            date.weekday() === 6\r\n        ) ? 'mycustomdate' : false;\r\n    }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\nimport { LocaleConfig } from 'ngx-daterangepicker-material';\r\n\r\n@Component({\r\n    selector: 'app-single-daterangepicker',\r\n    templateUrl: './single-daterangepicker.component.html'\r\n})\r\nexport class SingleDaterangepickerComponent implements OnInit {\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n    }\r\n\r\n    alwaysShowCalendars: boolean;\r\n\r\n    locale: LocaleConfig = {\r\n        applyLabel: 'Appliquer',\r\n        customRangeLabel: ' - ',\r\n        daysOfWeek: moment.weekdaysMin(),\r\n        monthNames: moment.monthsShort(),\r\n        firstDay: moment.localeData().firstDayOfWeek(),\r\n    };\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    isInvalidDate(date) {\r\n        return date.weekday() === 0;\r\n    }\r\n\r\n    isCustomDate(date) {\r\n        return (\r\n            date.weekday() === 0 ||\r\n            date.weekday() === 6\r\n        ) ? 'mycustomdate' : false;\r\n    }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -1505,16 +1859,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 11
+                "line": 9
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Single daterangepicker</mat-label>\r\n    <input  autocomplete=\"off\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" matInput placeholder=\"Choose date\" [singleDatePicker]=\"true\" ngxDaterangepickerMd>\r\n</mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Date</mat-label>\r\n    <input  autocomplete=\"off\" [showCancel]=\"true\" [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" matInput placeholder=\"Choose date\" [singleDatePicker]=\"true\" ngxDaterangepickerMd>\r\n    <mat-icon matPrefix class=\"material-icons-outlined\">calendar_today</mat-icon>\r\n</mat-form-field>"
         },
         {
             "name": "SingleWithTimeComponent",
-            "id": "component-SingleWithTimeComponent-a94bc70058cd850714b75ebedb7536e0",
+            "id": "component-SingleWithTimeComponent-ae6a788eed7986b5835f629c35b2adf8",
             "file": "src/app/daterangepicker/single-with-time/single-with-time.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1538,7 +1892,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 11
+                    "line": 15
                 },
                 {
                     "name": "locale",
@@ -1548,7 +1902,7 @@
                     "type": "LocaleConfig",
                     "optional": false,
                     "description": "",
-                    "line": 20
+                    "line": 17
                 }
             ],
             "methodsClass": [
@@ -1614,7 +1968,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -1626,7 +1980,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\nimport { LocaleConfig } from 'ngx-daterangepicker-material';\r\n\r\n@Component({\r\n    selector: 'app-single-with-time',\r\n    templateUrl: './single-with-time.component.html'\r\n})\r\nexport class SingleWithTimeComponent implements OnInit {\r\n\r\n    alwaysShowCalendars: boolean;\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n    }\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    locale: LocaleConfig = {\r\n        applyLabel: 'Appliquer',\r\n        customRangeLabel: ' - ',\r\n        daysOfWeek: moment.weekdaysMin(),\r\n        monthNames: moment.monthsShort(),\r\n        firstDay: moment.localeData().firstDayOfWeek(),\r\n    }\r\n\r\n    isInvalidDate(date) {\r\n        return date.weekday() === 0;\r\n    }\r\n\r\n    isCustomDate(date) {\r\n        return (\r\n            date.weekday() === 0 ||\r\n            date.weekday() === 6\r\n        ) ? 'mycustomdate' : false;\r\n    }\r\n}\r\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport * as moment from 'moment';\r\nimport { LocaleConfig } from 'ngx-daterangepicker-material';\r\n\r\n@Component({\r\n    selector: 'app-single-with-time',\r\n    templateUrl: './single-with-time.component.html'\r\n})\r\nexport class SingleWithTimeComponent implements OnInit {\r\n\r\n    constructor() {\r\n        this.alwaysShowCalendars = true;\r\n    }\r\n\r\n    alwaysShowCalendars: boolean;\r\n\r\n    locale: LocaleConfig = {\r\n        applyLabel: 'Appliquer',\r\n        customRangeLabel: ' - ',\r\n        daysOfWeek: moment.weekdaysMin(),\r\n        monthNames: moment.monthsShort(),\r\n        firstDay: moment.localeData().firstDayOfWeek(),\r\n    };\r\n\r\n    ngOnInit(): void {\r\n    }\r\n\r\n    isInvalidDate(date) {\r\n        return date.weekday() === 0;\r\n    }\r\n\r\n    isCustomDate(date) {\r\n        return (\r\n            date.weekday() === 0 ||\r\n            date.weekday() === 6\r\n        ) ? 'mycustomdate' : false;\r\n    }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -1636,12 +1990,74 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 11
+                "line": 9
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>With Time Picker</mat-label>\r\n    <input matInput  autocomplete=\"off\" placeholder=\"Choose date\" [timePicker]=\"true\" [timePickerSeconds]=\"true\" [timePickerIncrement]=\"15\"\r\n        [timePicker24Hour]=\"true\" [showCancel]=\"true\"\r\n        [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [singleDatePicker]=\"true\" [autoApply] =\"false\"\r\n        ngxDaterangepickerMd>\r\n</mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Date</mat-label>\r\n    <input matInput  autocomplete=\"off\" placeholder=\"Choose date\" [timePicker]=\"true\" [timePickerSeconds]=\"true\" [timePickerIncrement]=\"15\"\r\n        [timePicker24Hour]=\"true\" [showCancel]=\"true\"\r\n        [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [singleDatePicker]=\"true\" [autoApply] =\"false\"\r\n        ngxDaterangepickerMd>\r\n        <mat-icon matPrefix class=\"material-icons-outlined\">calendar_today</mat-icon>\r\n</mat-form-field>"
+        },
+        {
+            "name": "TabsComponent",
+            "id": "component-TabsComponent-971b8182bb6c0c74dcae15ff970ac741",
+            "file": "src/app/tabs/tabs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-tabs",
+            "styleUrls": [
+                "./tabs.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./tabs.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-tabs',\n  templateUrl: './tabs.component.html',\n  styleUrls: ['./tabs.component.scss']\n})\nexport class TabsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./tabs.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<mat-tab-group mat-align-tabs=\"start\">\n    <mat-tab label=\"First\">Content 1</mat-tab>\n    <mat-tab label=\"Second\">Content 2</mat-tab>\n    <mat-tab label=\"Third\">Content 3</mat-tab>\n  </mat-tab-group>"
         },
         {
             "name": "TertiaryButtonComponent",
@@ -1848,19 +2264,19 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>With Time Picker</mat-label>\r\n    <input  autocomplete=\"off\" matInput placeholder=\"Choose date\" [timePicker]=\"true\" [timePickerSeconds]=\"true\"\r\n        [timePickerIncrement]=\"15\" [timePicker24Hour]=\"true\" [showCancel]=\"true\"\r\n        [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [autoApply] =\"false\" ngxDaterangepickerMd>\r\n</mat-form-field>"
+            "templateData": "<mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n    <mat-label>Date Range</mat-label>\r\n    <input  autocomplete=\"off\" matInput placeholder=\"Choose date\" [timePicker]=\"true\" [timePickerSeconds]=\"true\"\r\n        [timePickerIncrement]=\"15\" [timePicker24Hour]=\"true\" [showCancel]=\"true\"\r\n        [locale]=\"{applyLabel: 'Apply', cancelLabel: 'Cancel', format: 'DD-MM-YYYY'}\" [autoApply] =\"false\" ngxDaterangepickerMd>\r\n        <mat-icon matPrefix class=\"material-icons-outlined\">calendar_today</mat-icon>\r\n</mat-form-field>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-a036c08a4dc496e3a760a5636510b1f3",
+            "id": "module-AppModule-387ceb6c87bfea32031088c972b0b42c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { SingleDaterangepickerComponent } from './daterangepicker/single-daterangepicker/single-daterangepicker.component';\r\nimport { CustomRangeComponent } from './daterangepicker/custom-range/custom-range.component';\r\nimport { WithTimepickerComponent } from './daterangepicker/with-timepicker/with-timepicker.component';\r\nimport { SimpleDaterangepickerComponent } from './daterangepicker/simple-daterangepicker/simple-daterangepicker.component';\r\nimport DaterangepickerComponent from './daterangepicker/daterangepicker.component';\r\nimport { SingleWithTimeComponent } from './daterangepicker/single-with-time/single-with-time.component';\r\nimport { SimpleComponent } from './ag-grid/simple/simple.component';\r\nimport AgGridComponent from './ag-grid/ag-grid.component';\r\nimport { TextInputComponent } from './text-input/text-input.component';\r\nimport { SimpleInputComponent } from './text-input/simple-input/simple-input.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { PrimaryButtonComponent } from './button/primary/primary.component';\r\nimport { SecondaryButtonComponent } from './button/secondary/secondary.component';\r\nimport { TertiaryButtonComponent } from './button/tertiary/tertiary.component';\r\nimport { SingleAutocompleteComponent } from './single-autocomplete/single-autocomplete.component';\r\nimport { SimpleSingleSelectComponent } from './single-autocomplete/simple-single-select/simple-single-select.component';\nimport { BlueBandComponent } from './blue-band/blue-band.component';\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SingleDaterangepickerComponent,\r\n    CustomRangeComponent,\r\n    WithTimepickerComponent,\r\n    SimpleDaterangepickerComponent,\r\n    DaterangepickerComponent,\r\n    SingleWithTimeComponent,\r\n    AgGridComponent,\r\n    SimpleComponent,\r\n    TextInputComponent,\r\n    SimpleInputComponent,\r\n    ButtonComponent,\r\n    PrimaryButtonComponent,\r\n    SecondaryButtonComponent,\r\n    TertiaryButtonComponent,\r\n    SingleAutocompleteComponent,\r\n    SimpleSingleSelectComponent,\r\n    BlueBandComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    BrowserAnimationsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { SingleDaterangepickerComponent } from './daterangepicker/single-daterangepicker/single-daterangepicker.component';\r\nimport { CustomRangeComponent } from './daterangepicker/custom-range/custom-range.component';\r\nimport { WithTimepickerComponent } from './daterangepicker/with-timepicker/with-timepicker.component';\r\nimport { SimpleDaterangepickerComponent } from './daterangepicker/simple-daterangepicker/simple-daterangepicker.component';\r\nimport DaterangepickerComponent from './daterangepicker/daterangepicker.component';\r\nimport { SingleWithTimeComponent } from './daterangepicker/single-with-time/single-with-time.component';\r\nimport { SimpleComponent } from './ag-grid/simple/simple.component';\r\nimport AgGridComponent from './ag-grid/ag-grid.component';\r\nimport { TextInputComponent } from './text-input/text-input.component';\r\nimport { SimpleInputComponent } from './text-input/simple-input/simple-input.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { PrimaryButtonComponent } from './button/primary/primary.component';\r\nimport { SecondaryButtonComponent } from './button/secondary/secondary.component';\r\nimport { TertiaryButtonComponent } from './button/tertiary/tertiary.component';\r\nimport { SingleAutocompleteComponent } from './single-autocomplete/single-autocomplete.component';\r\nimport { SimpleSingleSelectComponent } from './single-autocomplete/simple-single-select/simple-single-select.component';\r\nimport BlueBandComponent from './blue-band/blue-band.component';\r\nimport { CheckboxComponent } from './checkbox/checkbox.component';\r\nimport { RadioButtonComponent } from './radio-button/radio-button.component';\r\nimport { TabsComponent } from './tabs/tabs.component';\r\nimport { IconComponent } from './icon/icon.component';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { AgGridModule } from 'ag-grid-angular';\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatRadioModule } from '@angular/material/radio';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { HttpClientModule } from '@angular/common/http';\r\nimport { MatAutocompleteModule } from '@angular/material/autocomplete';\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SingleDaterangepickerComponent,\r\n    CustomRangeComponent,\r\n    WithTimepickerComponent,\r\n    SimpleDaterangepickerComponent,\r\n    DaterangepickerComponent,\r\n    SingleWithTimeComponent,\r\n    AgGridComponent,\r\n    SimpleComponent,\r\n    TextInputComponent,\r\n    SimpleInputComponent,\r\n    ButtonComponent,\r\n    PrimaryButtonComponent,\r\n    SecondaryButtonComponent,\r\n    TertiaryButtonComponent,\r\n    SingleAutocompleteComponent,\r\n    SimpleSingleSelectComponent,\r\n    BlueBandComponent,\r\n    CheckboxComponent,\r\n    RadioButtonComponent,\r\n    TabsComponent,\r\n    IconComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    BrowserAnimationsModule,\r\n    MatInputModule,\r\n    MatButtonModule,\r\n    MatIconModule,\r\n    AgGridModule.withComponents([]),\r\n    MatCheckboxModule,\r\n    MatRadioModule,\r\n    MatTabsModule,\r\n    NgxDaterangepickerMd.forRoot(),\r\n    HttpClientModule,\r\n    MatAutocompleteModule\r\n\r\n  ],\r\n  providers: [],\r\n  schemas: [CUSTOM_ELEMENTS_SCHEMA],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1879,13 +2295,22 @@
                             "name": "BlueBandComponent"
                         },
                         {
+                            "name": "CheckboxComponent"
+                        },
+                        {
                             "name": "CustomRangeComponent"
                         },
                         {
                             "name": "DaterangepickerComponent"
                         },
                         {
+                            "name": "IconComponent"
+                        },
+                        {
                             "name": "PrimaryButtonComponent"
+                        },
+                        {
+                            "name": "RadioButtonComponent"
                         },
                         {
                             "name": "SecondaryButtonComponent"
@@ -1912,6 +2337,9 @@
                             "name": "SingleWithTimeComponent"
                         },
                         {
+                            "name": "TabsComponent"
+                        },
+                        {
                             "name": "TertiaryButtonComponent"
                         },
                         {
@@ -1924,7 +2352,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "NgxDaterangepickerMd"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
@@ -1988,10 +2420,40 @@
                 "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
+                "name": "iconList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/icon/icon-function.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require('src/assets/json/material-icons-list-json.json')"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button1.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button1.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2011,6 +2473,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button1.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2040,7 +2512,37 @@
                 "name": "Simple",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Simple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/daterangpicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Simple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Simple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/radio-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2057,6 +2559,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Simple",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tab.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "simpleGridColumn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2064,7 +2576,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n    {\r\n        headerName: \"Fund\", field: \"fund\",  minWidth: 180, maxWidth: 180,\r\n         sortingOrder: ['asc', 'desc'], \r\n    },\r\n    { headerName: \"Daily Book P&L\", cellClass: \"\", field: \"daily_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: \"Product Type\", field: \"product_type\", sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: \"MTD Book P&L\", field: \"mtd_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    \r\n    { headerName: \"YTD Book P&L\", field: \"ytd_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    { headerName: \"End Book NAV\", field: \"end_book_nav\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n   \r\n]"
+                "defaultValue": "[\r\n    {\r\n        headerName: 'Fund', field: 'fund', minWidth: 180, maxWidth: 180,\r\n        sortingOrder: ['asc', 'desc'],\r\n    },\r\n    { headerName: 'Daily Book P&L', cellClass: '', field: 'daily_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: 'Product Type', field: 'product_type', sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: 'MTD Book P&L', field: 'mtd_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n\r\n    { headerName: 'YTD Book P&L', field: 'ytd_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    { headerName: 'End Book NAV', field: 'end_book_nav', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n\r\n]"
             },
             {
                 "name": "simpleGridRowData",
@@ -2074,7 +2586,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Aryehuslp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymf\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Aryehcaptrust\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'}\r\n   \r\n    \r\n]"
+                "defaultValue": "[\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Aryehuslp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymf', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Aryehcaptrust', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' }\r\n]"
             },
             {
                 "name": "SimpleInput",
@@ -2101,6 +2613,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/daterangpicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button1.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2134,7 +2656,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n    props: args,\r\n})"
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CheckboxComponent>",
+                "defaultValue": "(args: CheckboxComponent) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -2150,6 +2682,26 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/icon.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<IconComponent>",
+                "defaultValue": "(args: IconComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/radio-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<RadioButtonComponent>",
+                "defaultValue": "(args: RadioButtonComponent) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/single-autocomplete.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2160,11 +2712,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/Button1.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent1>",
+                "defaultValue": "(args: ButtonComponent1) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/text-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<TextInputComponent>",
                 "defaultValue": "(args: TextInputComponent) => ({\r\n    props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/tab.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TabsComponent>",
+                "defaultValue": "(args: TabsComponent) => ({\r\n    props: args,\r\n})"
             },
             {
                 "name": "Tertiary",
@@ -2187,7 +2759,35 @@
                 "defaultValue": "Template.bind({})"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "getIconList",
+                "file": "src/app/icon/icon-function.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "category",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "returnType": "any",
+                "jsdoctags": [
+                    {
+                        "name": "category",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -2298,6 +2898,70 @@
                     "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
+            "src/app/icon/icon-function.ts": [
+                {
+                    "name": "iconList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/icon/icon-function.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require('src/assets/json/material-icons-list-json.json')"
+                }
+            ],
+            "src/stories/Button1.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button1.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button1.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button1.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button1.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button1.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ButtonComponent1>",
+                    "defaultValue": "(args: ButtonComponent1) => ({\n  props: args,\n})"
+                }
+            ],
             "src/stories/Button.stories.ts": [
                 {
                     "name": "Primary",
@@ -2327,7 +2991,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\r\n    props: args,\r\n})"
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
                 },
                 {
                     "name": "Tertiary",
@@ -2384,6 +3048,72 @@
                     "defaultValue": "(args: BlueBandComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
+            "src/stories/checkbox.stories.ts": [
+                {
+                    "name": "Simple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CheckboxComponent>",
+                    "defaultValue": "(args: CheckboxComponent) => ({\r\n    props: args,\r\n})"
+                }
+            ],
+            "src/stories/icon.stories.ts": [
+                {
+                    "name": "Simple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/icon.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<IconComponent>",
+                    "defaultValue": "(args: IconComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/radio-button.stories.ts": [
+                {
+                    "name": "Simple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/radio-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/radio-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<RadioButtonComponent>",
+                    "defaultValue": "(args: RadioButtonComponent) => ({\r\n    props: args,\r\n})"
+                }
+            ],
             "src/stories/single-autocomplete.stories.ts": [
                 {
                     "name": "Simple",
@@ -2406,6 +3136,28 @@
                     "defaultValue": "(args: SingleAutocompleteComponent) => ({\r\n    props: args,\r\n})"
                 }
             ],
+            "src/stories/tab.stories.ts": [
+                {
+                    "name": "Simple",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tab.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/tab.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TabsComponent>",
+                    "defaultValue": "(args: TabsComponent) => ({\r\n    props: args,\r\n})"
+                }
+            ],
             "src/app/ag-grid/ag-grid.mock.ts": [
                 {
                     "name": "simpleGridColumn",
@@ -2415,7 +3167,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n    {\r\n        headerName: \"Fund\", field: \"fund\",  minWidth: 180, maxWidth: 180,\r\n         sortingOrder: ['asc', 'desc'], \r\n    },\r\n    { headerName: \"Daily Book P&L\", cellClass: \"\", field: \"daily_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: \"Product Type\", field: \"product_type\", sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: \"MTD Book P&L\", field: \"mtd_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    \r\n    { headerName: \"YTD Book P&L\", field: \"ytd_book_pl\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    { headerName: \"End Book NAV\", field: \"end_book_nav\", sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n   \r\n]"
+                    "defaultValue": "[\r\n    {\r\n        headerName: 'Fund', field: 'fund', minWidth: 180, maxWidth: 180,\r\n        sortingOrder: ['asc', 'desc'],\r\n    },\r\n    { headerName: 'Daily Book P&L', cellClass: '', field: 'daily_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: 'Product Type', field: 'product_type', sortingOrder: ['asc', 'desc'], minWidth: 180 },\r\n    { headerName: 'MTD Book P&L', field: 'mtd_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n\r\n    { headerName: 'YTD Book P&L', field: 'ytd_book_pl', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n    { headerName: 'End Book NAV', field: 'end_book_nav', sortingOrder: ['asc', 'desc'], minWidth: 170 },\r\n\r\n]"
                 },
                 {
                     "name": "simpleGridRowData",
@@ -2425,7 +3177,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Aryehuslp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymflp\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Arymf\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'},\r\n    { fund: \"Aryehcaptrust\", daily_book_pl: '148,579,476', product_type: \"Swaption\", mtd_book_pl: \"148,579,476\", ytd_book_pl: \"148,579,476\", end_book_nav: '255,080,079'}\r\n   \r\n    \r\n]"
+                    "defaultValue": "[\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Aryehuslp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymflp', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Arymf', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' },\r\n    { fund: 'Aryehcaptrust', daily_book_pl: '148,579,476', product_type: 'Swaption', mtd_book_pl: '148,579,476',\r\n    ytd_book_pl: '148,579,476', end_book_nav: '255,080,079' }\r\n]"
                 }
             ],
             "src/stories/text-input.stories.ts": [
@@ -2451,13 +3203,43 @@
                 }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/icon/icon-function.ts": [
+                {
+                    "name": "getIconList",
+                    "file": "src/app/icon/icon-function.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "category",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "any",
+                    "jsdoctags": [
+                        {
+                            "name": "category",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
     "routes": [],
     "coverage": {
-        "count": 1,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -2562,6 +3344,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/checkbox/checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/daterangepicker/custom-range/custom-range.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2616,6 +3407,44 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/icon/icon-function.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "getIconList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/icon/icon-function.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "iconList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/icon/icon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "IconComponent",
+                "coveragePercent": 60,
+                "coverageCount": "3/5",
+                "status": "good"
+            },
+            {
+                "filePath": "src/app/radio-button/radio-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RadioButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/single-autocomplete/simple-single-select/simple-single-select.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -2629,6 +3458,15 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "SingleAutocompleteComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/tabs/tabs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TabsComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"
@@ -2712,6 +3550,56 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/Button1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button1.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/ad-grid.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2759,6 +3647,35 @@
                 "coveragePercent": 83,
                 "coverageCount": "5/6",
                 "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/button1.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent1",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Simple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "src/stories/daterangpicker.stories.ts",
@@ -2830,12 +3747,52 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Simple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/icon.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/page.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "PageComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/radio-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Simple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/radio-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -2850,6 +3807,26 @@
             },
             {
                 "filePath": "src/stories/single-autocomplete.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tab.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Simple",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/tab.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

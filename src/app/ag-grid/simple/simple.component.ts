@@ -14,18 +14,18 @@ export class SimpleComponent implements OnInit {
         flex: 1,
         minWidth: 150,
         filter: true,
-        SingleClickEdit:true,
-        sortable:true,
+        SingleClickEdit: true,
+        sortable: true,
         resizable: true,
     };
-    sortingOrder= ['desc', 'asc', null];
+    sortingOrder = ['desc', 'asc', null];
     rowSelection = 'multiple';
     suppressRowClickSelection = true;
     suppressAggFuncInHeader = true;
     pivotMode = false;
     suppressColumnVirtualisation = true;
     debounceVerticalScrollbar =  true;
-    rowClass= 'white-bg';
+    rowClass = 'white-bg';
 
 
 

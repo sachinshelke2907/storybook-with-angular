@@ -8,14 +8,11 @@ import { LocaleConfig } from 'ngx-daterangepicker-material';
 })
 export class SingleWithTimeComponent implements OnInit {
 
-    alwaysShowCalendars: boolean;
-
     constructor() {
         this.alwaysShowCalendars = true;
     }
 
-    ngOnInit(): void {
-    }
+    alwaysShowCalendars: boolean;
 
     locale: LocaleConfig = {
         applyLabel: 'Appliquer',
@@ -23,13 +20,16 @@ export class SingleWithTimeComponent implements OnInit {
         daysOfWeek: moment.weekdaysMin(),
         monthNames: moment.monthsShort(),
         firstDay: moment.localeData().firstDayOfWeek(),
+    };
+
+    ngOnInit(): void {
     }
 
-    isInvalidDate(date) {
+    isInvalidDate(date): boolean {
         return date.weekday() === 0;
     }
 
-    isCustomDate(date) {
+    isCustomDate(date): boolean | string {
         return (
             date.weekday() === 0 ||
             date.weekday() === 6

@@ -6,7 +6,7 @@ import AgGridComponent from 'src/app/ag-grid/ag-grid.component';
 import { MatIconModule } from '@angular/material/icon';
 
 import { SimpleComponent } from 'src/app/ag-grid/simple/simple.component';
-import { BlueBandComponent } from 'src/app/blue-band/blue-band.component';
+import BlueBandComponent from 'src/app/blue-band/blue-band.component';
 
 export default {
     title: 'Example/AG Grid',
@@ -23,6 +23,18 @@ export default {
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+          versionFilePath: '',
+          componentPath: ''
+        },
+        docs: {
+         source: {
+            type: 'code',
+          }
+        } 
+      }
 } as Meta;
 
 const Template: Story<AgGridComponent> = (args: AgGridComponent) => ({

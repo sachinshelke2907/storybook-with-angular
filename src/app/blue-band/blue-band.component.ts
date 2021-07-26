@@ -5,10 +5,11 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './blue-band.component.html',
   styleUrls: ['./blue-band.component.scss']
 })
-export class BlueBandComponent implements OnInit {
+export default class BlueBandComponent implements OnInit {
+
   @Input()
-  iconsOption?: boolean = false;
-  
+  iconsOption = false;
+
 
   constructor() { }
   ngOnInit(): void {

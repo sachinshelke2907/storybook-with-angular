@@ -1,19 +1,19 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTabsModule} from '@angular/material/tabs';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
-import { CheckboxComponent } from 'src/app/checkbox/checkbox.component';
+import { TabsComponent } from 'src/app/tabs/tabs.component';
 
 export default {
-    title: 'Example/Checkbox',
-    component: CheckboxComponent,
+    title: 'Example/Tabs',
+    component: TabsComponent,
     decorators: [
         moduleMetadata({
             declarations: [
-                CheckboxComponent,
+                TabsComponent,
             ],
-            imports: [BrowserAnimationsModule, MatCheckboxModule],
+            imports: [BrowserAnimationsModule, MatTabsModule],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
@@ -31,7 +31,7 @@ export default {
       }
 } as Meta;
 
-const Template: Story<CheckboxComponent> = (args: CheckboxComponent) => ({
+const Template: Story<TabsComponent> = (args: TabsComponent) => ({
     props: args,
 });
 
