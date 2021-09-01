@@ -7,7 +7,7 @@ import { moduleMetadata } from '@storybook/angular';
 import { CustomRangeComponent, DaterangepickerComponent, SimpleDaterangepickerComponent, SingleDaterangepickerComponent, SingleWithTimeComponent, WithTimepickerComponent } from 'projects/dogma-designs/src/public-api';
 
 export default {
-    title: 'Example/Date Picker',
+    title: 'Example/DatePicker',
     component: DaterangepickerComponent,
     decorators: [
         moduleMetadata({
@@ -18,10 +18,22 @@ export default {
                 WithTimepickerComponent,
                 SingleWithTimeComponent
             ],
-            imports: [BrowserAnimationsModule, MatInputModule, NgxDaterangepickerMd.forRoot()],
+            imports: [BrowserAnimationsModule, MatInputModule, MatIconModule, NgxDaterangepickerMd.forRoot()],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         }),
     ],
+    parameters: {
+        // Module-Level 'in-dsm' configuration (Will apply to all stories inside the module)
+        'in-dsm': {
+            versionFilePath: '',
+            componentPath: ''
+        },
+        docs: {
+            //   source: {
+            //     type: 'code',
+            //   }
+        }
+    }
 } as Meta;
 
 const Template: Story<DaterangepickerComponent> = (args: DaterangepickerComponent) => ({
