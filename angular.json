@@ -28,7 +28,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/stories"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -124,6 +125,46 @@
             "production": {
               "devServerTarget": "angular-storybook:serve:production"
             }
+          }
+        }
+      }
+    },
+    "dogma-designs": {
+      "projectType": "library",
+      "root": "projects/dogma-designs",
+      "sourceRoot": "projects/dogma-designs/src",
+      "prefix": "storybook",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/dogma-designs/tsconfig.lib.json",
+            "project": "projects/dogma-designs/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/dogma-designs/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/dogma-designs/src/test.ts",
+            "tsConfig": "projects/dogma-designs/tsconfig.spec.json",
+            "karmaConfig": "projects/dogma-designs/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/dogma-designs/tsconfig.lib.json",
+              "projects/dogma-designs/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

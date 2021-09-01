@@ -1,15 +1,10 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { MatInputModule } from '@angular/material/input';
-import DaterangepickerComponent from 'src/app/daterangepicker/daterangepicker.component';
-import { SimpleDaterangepickerComponent } from 'src/app/daterangepicker/simple-daterangepicker/simple-daterangepicker.component';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
-import { SingleDaterangepickerComponent } from 'src/app/daterangepicker/single-daterangepicker/single-daterangepicker.component';
-import { CustomRangeComponent } from 'src/app/daterangepicker/custom-range/custom-range.component';
-import { WithTimepickerComponent } from 'src/app/daterangepicker/with-timepicker/with-timepicker.component';
-import { SingleWithTimeComponent } from 'src/app/daterangepicker/single-with-time/single-with-time.component';
+import { CustomRangeComponent, DaterangepickerComponent, SimpleDaterangepickerComponent, SingleDaterangepickerComponent, SingleWithTimeComponent, WithTimepickerComponent } from 'projects/dogma-designs/src/public-api';
 
 export default {
     title: 'Example/Date Picker',
