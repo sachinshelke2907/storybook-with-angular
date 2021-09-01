@@ -6,7 +6,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Open Sans', sans-serif;}
 
-@import 'assets/scss/material_theme.scss';
+// @import 'assets/scss/material_theme.scss';
 
 @import './projects/dogma-designs/src/assets/scss/_style.scss';
 
@@ -15,9 +15,11 @@ body { margin: 0; font-family: 'Open Sans', sans-serif;}
 @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
 
+@import './projects/dogma-designs/src/assets/scss/_style.scss';
 
-@import 'assets/scss/agGrid.scss';
-@import 'assets/scss/button.scss';
-@import 'assets/scss/single-autocomplete.scss';
+
+// @import 'assets/scss/agGrid.scss';
+// @import 'assets/scss/button.scss';
+// @import 'assets/scss/single-autocomplete.scss';
 
 

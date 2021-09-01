@@ -3,7 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { MatIconModule } from '@angular/material/icon';
-import BlueBandComponent from 'src/app/blue-band/blue-band.component';
+import { BlueBandComponent } from 'projects/dogma-designs/src/public-api';
 
 export default {
     title: 'Example/Blue Band',

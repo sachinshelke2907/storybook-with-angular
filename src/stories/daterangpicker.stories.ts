@@ -5,6 +5,7 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
 import { CustomRangeComponent, DaterangepickerComponent, SimpleDaterangepickerComponent, SingleDaterangepickerComponent, SingleWithTimeComponent, WithTimepickerComponent } from 'projects/dogma-designs/src/public-api';
+import { MatIconModule } from '@angular/material/icon';
 
 export default {
     title: 'Example/DatePicker',

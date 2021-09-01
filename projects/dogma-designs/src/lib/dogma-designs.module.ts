@@ -1,7 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { AgGridModule } from 'ag-grid-angular';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { AgGridComponent } from './component/ag-grid/ag-grid.component';
+import { SimpleComponent } from './component/ag-grid/simple/simple.component';
+import { BlueBandComponent } from './component/blue-band/blue-band.component';
 import { CustomRangeComponent } from './component/daterangepicker/custom-range/custom-range.component';
 import { DaterangepickerComponent } from './component/daterangepicker/daterangepicker.component';
 import { SimpleDaterangepickerComponent } from './component/daterangepicker/simple-daterangepicker/simple-daterangepicker.component';
@@ -18,11 +23,16 @@ import { WithTimepickerComponent } from './component/daterangepicker/with-timepi
         CustomRangeComponent,
         SingleWithTimeComponent,
         WithTimepickerComponent,
-        DaterangepickerComponent
+        DaterangepickerComponent,
+        AgGridComponent,
+        SimpleComponent,
+        BlueBandComponent
     ],
     imports: [
         CommonModule,
         MatInputModule,
+        MatIconModule,
+        AgGridModule.withComponents([]),
         NgxDaterangepickerMd.forRoot()
     ],
     exports: [
@@ -31,7 +41,10 @@ import { WithTimepickerComponent } from './component/daterangepicker/with-timepi
         CustomRangeComponent,
         SingleWithTimeComponent,
         WithTimepickerComponent,
-        DaterangepickerComponent
+        DaterangepickerComponent,
+        AgGridComponent,
+        SimpleComponent,
+        BlueBandComponent
     ]
 })
 export class DogmaDesignsModule { }

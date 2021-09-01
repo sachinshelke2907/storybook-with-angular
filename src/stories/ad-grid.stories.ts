@@ -2,11 +2,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AgGridModule } from 'ag-grid-angular';
-import AgGridComponent from 'src/app/ag-grid/ag-grid.component';
 import { MatIconModule } from '@angular/material/icon';
-
-import { SimpleComponent } from 'src/app/ag-grid/simple/simple.component';
-import BlueBandComponent from 'src/app/blue-band/blue-band.component';
+import { AgGridComponent, BlueBandComponent, SimpleComponent } from 'projects/dogma-designs/src/public-api';
 
 export default {
     title: 'Example/AG Grid',
@@ -14,7 +11,8 @@ export default {
     decorators: [
         moduleMetadata({
             declarations: [
-                SimpleComponent,BlueBandComponent
+                SimpleComponent,
+                BlueBandComponent
             ],
             imports: [
                 MatIconModule,

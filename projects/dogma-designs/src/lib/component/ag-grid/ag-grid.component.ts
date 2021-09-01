@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'app-ag-grid',
     templateUrl: './ag-grid.component.html'
 })
-export default class AgGridComponent implements OnInit {
+export class AgGridComponent implements OnInit {
 
     constructor() { }
 

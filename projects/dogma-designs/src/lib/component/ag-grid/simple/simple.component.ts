@@ -3,11 +3,13 @@ import 'ag-grid-enterprise';
 import { simpleGridColumn, simpleGridRowData } from '../ag-grid.mock';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+
 @Component({
     selector: 'app-ag-simple',
     templateUrl: './simple.component.html'
 })
 export class SimpleComponent implements OnInit {
+
     columnDefs = simpleGridColumn;
     rowData = simpleGridRowData;
     defaultColDef = {
@@ -24,7 +26,7 @@ export class SimpleComponent implements OnInit {
     suppressAggFuncInHeader = true;
     pivotMode = false;
     suppressColumnVirtualisation = true;
-    debounceVerticalScrollbar =  true;
+    debounceVerticalScrollbar = true;
     rowClass = 'white-bg';
 
 
