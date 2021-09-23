@@ -19,8 +19,7 @@
 * [4 Building](#4)
 * [5 Publishing](#5)
 * [6 Installation](#6)
-* [7 What it is important to know](#7)
-* [8 Inlining of templates and stylesheets](#8)
+* [7 How to use?](#7)
 * [Versions](#previous-versions)
 
 ## <a name="1"></a>1 Project structure
@@ -104,46 +103,16 @@ Before publishing the first time:
 ```Shell
 npm run publish:lib
 ```
+## <a name="6"></a>6 Installation
+### Installing
+```Shell
+npm install my-library --save 
+```
+## <a name="7"></a>7 How to use?
+- pending
 
-### Step to set up
-
-* Clone this repository
-* Copy all folders & file from cloned repo to your project folder
-* Open your project folder on your respective IDE ([Visual Studio Code](https://github.com/angular/angular-cli))
-
-### Installation
-
-This project use number of open-source project to work properly
-
-| Name | Description |
-| ---- | ----------- |
-| [Visual Studio Code](https://github.com/angular/angular-cli) | Latest Version |
-| [Angular CLI](https://github.com/angular/angular-cli) | Angular CLI >= version 11.0.5 |
-| [Yarn](https://classic.yarnpkg.com/en/docs/install) | Latest Version |
-| [Node JS](https://nodejs.org/en/download/) | Latest Version |
-
-##### After installing all above things follow below steps
-* Open `src/environments/environment.local.ts` file and change baseUrl path.
-* Here in this project firebased is used you can give any of base url.
-* Open CMD project folder run `npm install` or `yarn install` if you have yarn installed.
-* After completing installation project is ready to run.
-
-### Development server
-
-* Run `ng serve` for a dev server. 
-* Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-### Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-### Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-### Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## <a name="previous-versions"></a>Previous versions
+- **@[test/dogma 0.0.1](https://github.com/robisim74/angular-library-starter/tree/angular_v8)**
 
 ### Further help
 
